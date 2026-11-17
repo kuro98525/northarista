@@ -17,6 +17,7 @@ A static, self-contained mirror of [northarista.com](https://northarista.com/), 
 - **Language switcher** — the header dropdown (简体中文 / English) jumps to the translated version of the current page when one exists, otherwise to that language's home page.
 - **Mega menu** — the "Programs / 移民项目" hover panel with all program cards is restored.
 - **Consultation popup** — the 免费咨询 / Free Consultation form opens with its original styling.
+- **Mobile layout** — responsive header with a full-screen hamburger menu; the same navigation, language switch and consultation popup are available on phones.
 - **No outbound navigation** — links to pages that were not captured are disabled; clicking them does nothing instead of sending you to the live site.
 
 ## Repository layout
