@@ -1,0 +1,10 @@
+
+header .elementor-element-b52c307{width:100%!important}
+li.wpml-ls-item{position:relative}
+li.wpml-ls-item>ul.sub-menu{display:none;position:absolute!important;top:100%!important;right:0!important;left:auto!important;min-width:190px!important;background:#fff!important;box-shadow:0 18px 45px rgba(48,48,48,.14),0 4px 14px rgba(174,157,130,.16)!important;padding:6px 0!important;margin:0!important;list-style:none!important;z-index:2147482000!important}
+li.wpml-ls-item:hover>ul.sub-menu,li.wpml-ls-item.na-open>ul.sub-menu{display:block!important;height:auto!important;overflow:visible!important}
+li.wpml-ls-item ul.sub-menu li a.na-lang-opt{display:flex!important;align-items:flex-start!important;gap:10px!important;padding:12px 18px!important;text-decoration:none!important;color:#2f2f2f!important;white-space:nowrap!important}
+li.wpml-ls-item ul.sub-menu li a.na-lang-opt:hover{background:#f6f4f0!important}
+li.wpml-ls-item a.na-lang-opt img{width:22px;height:15px;margin-top:3px;flex:0 0 auto}
+.na-native{display:block;font-size:15px;font-weight:600;line-height:1.25}
+.na-disp{display:block;font-size:13px;color:#8c8c8c;line-height:1.35}

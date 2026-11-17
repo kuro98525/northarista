@@ -1,37 +1,40 @@
-# North Arista — Offline Website Archive
+# North Arista — Website Archive
 
-A single-file, self-contained offline archive of [northarista.com](https://northarista.com/), captured with [SingleFile](https://github.com/gildas-lormeau/SingleFile) and packaged as one self-extracting HTML file.
+A static, self-contained mirror of [northarista.com](https://northarista.com/), captured with [SingleFile](https://github.com/gildas-lormeau/SingleFile) and published with GitHub Pages.
+
+**Live site:** https://kuro98525.github.io/northarista/
 
 ## What's inside
 
-`index.html` (~21 MB) contains **61 pages** in one file:
-
-- English pages (44): home, about, programs, services, blog articles, process pages, contact, legal pages
-- Simplified Chinese pages (17): home, about, programs, services, news, contact, program comparison
-- All CSS, fonts and images are inlined — no network access required
+- **51 captured pages** — 34 English, 17 Simplified Chinese
+  - Home, About us, Programs (9 country program pages), Services, Process, Blog articles, News, Contact, Program comparison, Privacy & Terms
+- **Offline single-file archive** — `offline/northarista-archive.html` (~21 MB) contains all pages packed into one HTML file with deduplicated assets. Useful for keeping a fully offline copy.
+- Product PDFs are preserved under `assets/pdfs/`.
 
 ## Features
 
-- **Works fully offline** — open `index.html` in any modern browser
-- **Automatic language selection** — opens the Chinese version if the browser's preferred language is Chinese (`zh`, `zh-CN`, `zh-TW`, `zh-HK`), otherwise the English version
-- **In-archive navigation** — links between saved pages stay inside the file; links to pages that were not archived are disabled so you never get bounced to the live site
-- **Language switcher** — the header dropdown (简体中文 / English) matches the original site and jumps to the translated page when available
-- **Mega menu** — the "Programs / 移民项目" hover panel is restored with all program cards
-- **Consultation popup** — the 免费咨询 / Free Consultation form popup is reproduced with its original styling
+- **Automatic language selection** — visiting the root opens the Chinese version when the browser's preferred language is Chinese (`zh`, `zh-CN`, `zh-TW`, `zh-HK`), otherwise English.
+- **Language switcher** — the header dropdown (简体中文 / English) jumps to the translated version of the current page when one exists, otherwise to that language's home page.
+- **Mega menu** — the "Programs / 移民项目" hover panel with all program cards is restored.
+- **Consultation popup** — the 免费咨询 / Free Consultation form opens with its original styling.
+- **No outbound navigation** — links to pages that were not captured are disabled; clicking them does nothing instead of sending you to the live site.
 
-## Usage
+## Repository layout
 
-```sh
-# just open it
-start index.html      # Windows
-open index.html       # macOS
-xdg-open index.html   # Linux
+```
+index.html            language-based redirect
+en.html, zh.html      home pages
+en-*.html, zh-*.html  captured pages
+assets/               shared UI script, styles, popup, flags, PDFs
+offline/              single-file offline archive
+.nojekyll             disable Jekyll processing
 ```
 
-No build step, no server needed.
+## Offline usage
+
+Download `offline/northarista-archive.html` and open it directly in a browser — no server needed.
 
 ## Notes and limitations
 
-- Captured statically: JavaScript from the original site is not executed. Some dynamic widgets (e.g. the country/program selectors inside the consultation form, form submission) do not work offline.
-- This archive is a snapshot taken on **2026-11-17**. Content may have changed on the live site since.
-- The archived page text, images and other content are the property of **North Arista** and their respective owners. This repository is provided for reference/archival purposes only and does not grant any license to that content.
+- Captured statically on **2026-11-17**: JavaScript from the original site is not executed. Some dynamic widgets (e.g. the country/program selectors inside the consultation form, form submission) do not work.
+- Page content, images and other material are the property of **North Arista** and their respective owners. This repository is provided for reference/archival purposes only and does not grant any license to that content.
